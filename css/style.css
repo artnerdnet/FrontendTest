@@ -101,3 +101,46 @@ input# search - keyword {
 # username {
 	font - style: italic;
 }
+
+/* Repositories View */
+# reposView {
+	margin: 2 px 0 px 0 px 0 px;
+	height: 275 px;
+}
+
+# repoList {
+	list - style - type: none;
+	font - family: 'Open Sans', sans - serif;
+	text - transform: capitalize;
+	font - weight: 700;
+	font - size: 12 pt;
+	line - height: 50 px;
+	padding: 0;
+	margin: 0;
+	height: inherit;
+	overflow - y: scroll;
+	overflow - x: hidden;
+}
+
+# repoList li {
+	border - bottom: solid 1 px# d8d8d8;
+	padding: 0 15 px 0 15 px;
+}
+
+/* Scrollbar customization */
+# repoList::-webkit - scrollbar {
+	width: 10 px;
+}
+
+/* Track */
+
+# repoList::-webkit - scrollbar - track {
+	background: #fffff;
+}
+
+
+/* Handle */
+
+# repoList::-webkit - scrollbar - thumb {
+	background: #fffff;
+}
