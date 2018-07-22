@@ -7,6 +7,7 @@ html body {
     font-family: 'Open Sans', sans-serif;
 }
 
+/* FONTS */
 h1 {
     line-height: 0;
     font-family: 'Open Sans', sans-serif;
@@ -18,10 +19,23 @@ h1 {
 h2 {
     font-size: 12pt;
     border-bottom: solid 2px #000000;
-    line-height: 30pt;
-
+    line-height: 14pt;
 }
 
+a   {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: black;
+}
+
+/* CONTAINERS */
 #container {
     width: 100%;
     margin: 0;
@@ -40,6 +54,7 @@ h2 {
     padding: 25px;
 }
 
+/* SEARCH FIELDS */
 #searchBox {
     margin: 5px 0px 15px 0px;
     height: 35px;
@@ -73,6 +88,7 @@ input::-webkit-input-placeholder {
     border: 1 #d8d8d8;
 }
 
+/* USER VIEW */
 #userInfoView {
     display: flex;
     margin: 0;
@@ -92,8 +108,8 @@ input::-webkit-input-placeholder {
 }
 
 #userImg {
-    width: '100px';
-    height: '100px';
+    width: 100px;
+    height: 100px;
 }
 
 .userSpan {
@@ -123,6 +139,7 @@ input::-webkit-input-placeholder {
     overflow-x: hidden;
 }
 
+/* REPOSITORIES VIEW */
 #reposView {
     margin: 0;
     height: 265px;
@@ -143,24 +160,6 @@ input::-webkit-input-placeholder {
     width: 100%;
 }
 
-.scrollBar::-webkit-scrollbar {
-    width: 10px;
-}
-/* Track */
-.scrollBar::-webkit-scrollbar-track {
-    background: #fffff; 
-}
-
-/* Handle */
-.scrollBar::-webkit-scrollbar-thumb {
-    background: #fffff; 
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-}
-
 .repoListElement {
     border-bottom: solid 1px #d8d8d8;
     padding: 0 15px 0 15px;
@@ -168,33 +167,6 @@ input::-webkit-input-placeholder {
     justify-content: space-between;
     align-content: center;
     align-items: center;
-    font-family: 'Open Sans', sans-serif;
-}
-
-a   {
-    text-decoration: none;
-    color: black;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-a:visited {
-    color: black;
-}
-
-.repoStarCount {
-    padding: 2px;
-    width: 5%;
-    font-size: 10pt;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.repoForkCount {
-    padding: 2px;
-    width: 5%;
-    font-size: 10pt;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -213,3 +185,36 @@ span.fas {
     text-align: right;
 }
 
+.repoStarCount {
+    padding: 2px;
+    width: 5%;
+    font-size: 10pt;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.repoForkCount {
+    padding: 2px;
+    width: 5%;
+    font-size: 10pt;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* SCROLLBAR STYLING */
+.scrollBar::-webkit-scrollbar {
+    height: 220px;
+    width: 10px;
+}
+/* Track */
+.scrollBar::-webkit-scrollbar-track {
+    background: #fffff; 
+}
+
+/* Handle */
+.scrollBar::-webkit-scrollbar-thumb {
+    background: #fffff; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
