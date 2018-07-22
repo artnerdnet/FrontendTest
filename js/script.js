@@ -54,19 +54,33 @@ searchForm.addEventListener('submit', function(e) {
                 let repoForkCountSpan = document.createElement('span');
                 repoForkCountSpan.innerHTML += repoForks;
                 createLi.appendChild(repoForkCountSpan);
-                repoForkCountSpan.classList.add('repoForkCount', 'fas', 'fa-code-branch');
+                repoForkCountSpan.classList.add('repoForkCount');
             }            
             
             let addStarCount = () => {
                 let repoStarCountSpan = document.createElement('span');
                 repoStarCountSpan.innerHTML += repoStars;
                 createLi.appendChild(repoStarCountSpan);
-                repoStarCountSpan.classList.add('repoStarCount', 'fas', 'fa-star');
+                repoStarCountSpan.classList.add('repoStarCount');
+            }
+
+            let addStarIcon = () => {
+                let repoStarIconSpan = document.createElement('span');
+                createLi.appendChild(repoStarIconSpan);
+                repoStarIconSpan.classList.add('fas', 'fa-star');
             }
             
-            addForkCount();
+            let addForkIcon = () => {
+                let repoForkIconSpan = document.createElement('span');
+                createLi.appendChild(repoForkIconSpan);
+                repoForkIconSpan.classList.add('fas', 'fa-code-branch');
+            }
+
             addRepoTitle();
+            addStarIcon();
             addStarCount();
+            addForkIcon();
+            addForkCount();
         }
     })
 });
