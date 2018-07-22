@@ -5,6 +5,9 @@ html body {
     margin: 0;
     background-color: #F0F0F0;
     font-family: 'Open Sans', sans-serif;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 /* FONTS */
@@ -42,7 +45,6 @@ a:visited {
     background-color: #F0F0F0;
     display: flex;
 }
-
 
 #contentView {
     background-color: #ffffff;
@@ -214,7 +216,6 @@ span.fas {
 }
 
 /* SCROLLBAR STYLING */
-
 .scrollBar::-webkit-scrollbar {
     height: 220px;
     width: 10px;
