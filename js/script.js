@@ -8,7 +8,7 @@ const reposContainer = document.getElementById('reposView');
 searchForm.addEventListener('submit', function(e) {
     searchedTerm = searchField.value;
 
-    fetch(`https://api.github.com/users/${searchedTerm}`, {
+    fetch(`https://api.gitub.com/users/${searchedTerm}`, {
         headers: {
             Authorization: 'Client-ID 583f4cd67ae6eb74a55f'
         },
@@ -48,9 +48,15 @@ searchForm.addEventListener('submit', function(e) {
             let addUserBio = () => {
                 let userBioDiv = document.createElement('div');
                 userBioDiv.id = 'bioBox';
-                userBioDiv.classList.add('scrollBar');
-                userBioDiv.innerHTML += `<span id='biography'>${userBio}</span>`;
-                userContainer.appendChild(userBioDiv);
+
+                if (userBio == null) {
+                    userBioDiv.innerHTML += `<span id='biography'>No bio available.</span>`;
+                    userContainer.appendChild(userBioDiv);
+                } else {
+                    userBioDiv.classList.add('scrollBar');
+                    userBioDiv.innerHTML += `<span id='biography'>${userBio}</span>`;
+                    userContainer.appendChild(userBioDiv);
+                }
             }
 
             addUserAvatar();
@@ -59,7 +65,7 @@ searchForm.addEventListener('submit', function(e) {
             addUserBio();
             fetchRepos();
         }
-    })
+    }).catch(error => console.error('Error:', error))
 
     let fetchRepos = () => {
         fetch(`https://api.github.com/users/${searchedTerm}/repos`, {
