@@ -38,6 +38,36 @@ h2 {
 	padding: 25px;
 }
 
+/* Search fields */
+# searchBox {
+	margin: 5 px 0 px 15 px 0 px;
+	height: 35 px;
+}
+
+# search - keyword {
+	width: 75 %;
+	height: 25 px;
+	border - radius: 5 px;
+	border: 1# d8d8d8;
+}
+
+input# search - keyword {
+	padding: 5 px;
+	color: #d8d8d8;
+	font - family: 'Open Sans', sans - serif;
+}
+
+# submit - btn {
+	width: 70 px;
+	height: 40 px;
+	margin - left: 10 px;
+	background: -webkit - gradient(linear, left top, left bottom, from(#ffffff), to(#F0F0F0));
+	font - weight: 700;
+	font - family: 'Open Sans', sans - serif;
+	border - radius: 5 px;
+	border: 1# d8d8d8;
+}
+
 /* User View*/
 # userInfoView {
 	display: flex;
