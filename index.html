@@ -3,14 +3,17 @@
 
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Hello!</title>
+    <title>Github Search Tool!</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 </head>
 
 <body>
+
     <div id='contentView'>
         <div id='searchBox'>
             <form id="search-form" action="#">
+                <!--    <label for="search-keyword" class="visuallyhidden">What are you interested in today?</label> accesibility-->
                 <input id="search-keyword" type="text" name="search-keyword" placeholder="Search username..." required>
                 <input id="submit-btn" type="submit" value="Search">
             </form>
@@ -21,22 +24,37 @@
             <div id='userView'>
                 <span id='username' class='userSpan'>@username</span>
                 <h1 id='fullname'>full name</h1>
-                <span id='biography' class='userSpan'>this is the bio...</span>
+                <div id='bioBox' class='scrollBar'><span id='biography' class='userSpan'>this is the bio...</span></div>
             </div>
 
         </div>
-        <div id='reposView'>
-            <ul id='repoList'>
-                <h2>Repositories</h2>
-                <li>Repo 1</li>
-                <li>Repo 2</li>
-                <li>Repo 3</li>
-                <li>Repo 4</li>
+        <div id="reposView">
+            <h2>Repositories</h2>
+            <ul id="repoList" class="scrollBar">
+                <li class="repoListElement">
+                    <span class="repoTitle"><a href="https://github.com/">Repo 1</a></span>
+                    <span class="repoStarCount fas fa-star">1</span>
+                    <span class="repoForkCount fas fa-code-branch">2</span>
+                </li>
+                <li class="repoListElement">
+                    <span class="repoTitle"><a href="https://github.com/">Repo 2</a></span>
+                    <span class="repoStarCount fas fa-star">6</span>
+                    <span class="repoForkCount fas fa-code-branch">3</span>
+                </li>
+                <li class="repoListElement">
+                    <span class="repoTitle"><a href="https://github.com/">Repo 3</a></span>
+                    <span class="repoStarCount fas fa-star">2</span>
+                    <span class="repoForkCount fas fa-code-branch">9</span>
+                </li>
+                <li class="repoListElement">
+                    <span class="repoTitle"><a href="https://github.com/">Repo 4</a></span>
+                    <span class="repoStarCount fas fa-star">1</span>
+                    <span class="repoForkCount fas fa-code-branch">10</span>
+                </li>
             </ul>
-
         </div>
     </div>
 </body>
-<script src='script/javascript.js'></script>
-    
+<script src='js/javascript.js'></script>
+
 </html>
