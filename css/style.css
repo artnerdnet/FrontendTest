@@ -48,7 +48,7 @@ a:visited {
     background-color: #ffffff;
     border-radius: 15px;
     width: 400px;
-    height: 450px;
+    overflow: auto;
     box-shadow: 5px 5px 19px #888888;
     margin: 50px;
     padding: 25px;
@@ -57,7 +57,7 @@ a:visited {
 /* SEARCH FIELDS */
 #searchBox {
     margin: 5px 0px 15px 0px;
-    height: 35px;
+    overflow: auto;
 }
 
 #search-keyword {
@@ -88,6 +88,22 @@ input::-webkit-input-placeholder {
     border: 1 #d8d8d8;
 }
 
+#errorMsg {
+    height: 44px;
+    margin: 0;
+    margin-top: 10px;
+    padding: 10px;
+    color: #991111;
+    background-color: #FCDEDE;
+    border: 1 #991111;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10pt;
+}
+.hide {
+    display: none;
+}
+
 /* USER VIEW */
 #userInfoView {
     display: flex;
@@ -98,7 +114,6 @@ input::-webkit-input-placeholder {
 #userView {
     margin: 0px 0px 0px 10px;
     height: 75px;
-    
 }
 
 #userInfo {
@@ -108,8 +123,8 @@ input::-webkit-input-placeholder {
 }
 
 #userImg {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
 }
 
 .userSpan {
@@ -142,7 +157,6 @@ input::-webkit-input-placeholder {
 /* REPOSITORIES VIEW */
 #reposView {
     margin: 0;
-    height: 265px;
 }
 
 #repoList {
@@ -154,10 +168,10 @@ input::-webkit-input-placeholder {
     line-height: 50px;
     padding: 0;
     margin: 0;
-    height: inherit;
+    height: 250px;
+    width: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
-    width: 100%;
 }
 
 .repoListElement {
@@ -200,6 +214,7 @@ span.fas {
 }
 
 /* SCROLLBAR STYLING */
+
 .scrollBar::-webkit-scrollbar {
     height: 220px;
     width: 10px;
