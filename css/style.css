@@ -1,146 +1,201 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
-
 html body {
-	width: 100 %;
+	width: 100%;
 	margin: 0;
-	background - color: #F0F0F0;
-	font - family: 'Open Sans', sans - serif;
+	background-color: #F0F0F0;
+	font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
-	line - height: 0;
-	font - family: 'Open Sans', sans - serif;
-	text - transform: capitalize;
-	font - weight: 700;
-	font - size: 22 pt;
+	line-height: 0;
+	font-family: 'Open Sans', sans-serif;
+	text-transform: capitalize;
+	font-weight: 700;
+	font-size: 22pt;
 }
 
 h2 {
-	font - size: 12 pt;
-	border - bottom: solid 2 px #000000;
-	padding: 0 15px 0 0px;
+	font-size: 12pt;
+	border-bottom: solid 2px #000000;
+	line-height: 30pt;
 }
 
-# container {
-	width: 100 %;
+#container {
+	width: 100%;
 	margin: 0;
-	background - color: #F0F0F0;
+	background-color: #F0F0F0;
 	display: flex;
 }
 
-# contentView {
-	background - color: #ffffff;
-	border - radius: 15 px;
-	width: 400 px;
-	height: 450 px;
-	box - shadow: 5 px 5 px 19 px #888888;
+#contentView {
+	background-color: #ffffff;
+	border-radius: 15px;
+	width: 400px;
+	height: 450px;
+	box-shadow: 5px 5px 19px #888888;
 	margin: 50px;
 	padding: 25px;
 }
 
-/* Search fields */
-# searchBox {
-	margin: 5 px 0 px 15 px 0 px;
-	height: 35 px;
+#searchBox {
+	margin: 5px 0px 15px 0px;
+	height: 35px;
 }
 
-# search - keyword {
-	width: 75 %;
-	height: 25 px;
-	border - radius: 5 px;
-	border: 1# d8d8d8;
+#search-keyword {
+	width: 75%;
+	height: 25px;
+	border-radius: 5px;
+	border: 1 #d8d8d8;
 }
 
-input# search - keyword {
-	padding: 5 px;
+input#search-keyword {
+	padding: 5px;
+	color: #000000;
+	font-family: 'Open Sans', sans-serif;
+}
+
+input::-webkit-input-placeholder {
 	color: #d8d8d8;
-	font - family: 'Open Sans', sans - serif;
 }
 
-# submit - btn {
-	width: 70 px;
-	height: 40 px;
-	margin - left: 10 px;
-	background: -webkit - gradient(linear, left top, left bottom, from(#ffffff), to(#F0F0F0));
-	font - weight: 700;
-	font - family: 'Open Sans', sans - serif;
-	border - radius: 5 px;
-	border: 1# d8d8d8;
+#submit-btn {
+	width: 70px;
+	height: 40px;
+	margin-left: 10px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#F0F0F0));
+	font-weight: 700;
+	font-family: 'Open Sans', sans-serif;
+	border-radius: 5px;
+	border: 1 #d8d8d8;
 }
 
-/* User View*/
-# userInfoView {
+#userInfoView {
 	display: flex;
 	margin: 0;
 	padding: 0;
 }
 
-# userView {
-	margin: 0 px 0 px 0 px 10 px;
-	height: 75 px;
+#userView {
+	margin: 0px 0px 0px 10px;
+	height: 75px;
 }
 
-# userInfo {
-	margin: 0 px 0 px 0 px 0 px;
-	height: 75 px;
-	width: 30 %;
+#userInfo {
+	margin: 0px 0px 0px 0px;
+	height: 75px;
+	width: 30%;
 }
 
-# userImg {
+#userImg {
 	width: '100px';
 	height: '100px';
 }
 
 .userSpan {
-	line - height: 0 %;
-	font - family: 'Open Sans', sans - serif;
-	font - weight: 300;
-	font - size: 10 pt;
+	line-height: 0%;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 10pt;
 }
 
-# username {
-	font - style: italic;
+#username {
+	font-style: italic;
+	font-size: 10pt;
 }
 
-/* Repositories View */
-# reposView {
-	margin: 2 px 0 px 0 px 0 px;
-	height: 275 px;
+#fullname {}
+
+#biography {}
+
+#bioBox {
+	font-size: 10pt;
+	height: 25px;
+	overflow: scroll;
+	overflow-x: hidden;
 }
 
-# repoList {
-	list - style - type: none;
-	font - family: 'Open Sans', sans - serif;
-	text - transform: capitalize;
-	font - weight: 700;
-	font - size: 12 pt;
-	line - height: 50 px;
+#reposView {
+	margin: 0;
+	height: 265px;
+}
+
+#repoList {
+	list-style-type: none;
+	font-family: 'Open Sans', sans-serif;
+	text-transform: capitalize;
+	font-weight: 700;
+	font-size: 12pt;
+	line-height: 50px;
 	padding: 0;
 	margin: 0;
 	height: inherit;
-	overflow - y: scroll;
-	overflow - x: hidden;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	width: 100%;
 }
 
-# repoList li {
-	border - bottom: solid 1 px# d8d8d8;
-	padding: 0 15 px 0 15 px;
+.scrollBar::-webkit-scrollbar {
+	width: 10px;
 }
 
-/* Scrollbar customization */
-# repoList::-webkit - scrollbar {
-	width: 10 px;
-}
 
 /* Track */
 
-# repoList::-webkit - scrollbar - track {
+.scrollBar::-webkit-scrollbar-track {
 	background: #fffff;
 }
 
 
 /* Handle */
 
-# repoList::-webkit - scrollbar - thumb {
+.scrollBar::-webkit-scrollbar-thumb {
 	background: #fffff;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+.repoListElement {
+	border-bottom: solid 1px #d8d8d8;
+	padding: 0 15px 0 15px;
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	align-items: center;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: black;
+}
+
+.repoStarCount {
+	padding: 2px;
+	width: 5%;
+	font-size: 10pt;
+}
+
+span.repoForkCount {
+	padding: 2px;
+	width: 5%;
+	font-size: 10pt;
+}
+
+span.repoTitle {
+	text-decoration: none;
+	color: black;
+	width: 80%;
 }
