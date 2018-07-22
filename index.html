@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Github Search Engine!</title>
+    <title>Hello!</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
 </head>
+
 <body>
+    <div id='contentView'>
+        <div id='searchBox'>
+            <form id="search-form" action="#">
+                <input id="search-keyword" type="text" name="search-keyword" placeholder="Search username..." required>
+                <input id="submit-btn" type="submit" value="Search">
+            </form>
+        </div>
+        <div id='userInfoView'>
+            <div id='userAvatar'><img id='userImg' src='img/placeholder.png'></div>
 
-<h1>Hello!</h1>
+            <div id='userView'>
+                <span id='username' class='userSpan'>@username</span>
+                <h1 id='fullname'>full name</h1>
+                <span id='biography' class='userSpan'>this is the bio...</span>
+            </div>
 
-<div id='contentView'>
-    <div id='searchBox'>
-        <form id="search-form" action="#">
-            <input id="search-keyword" type="text" name="search-keyword" placeholder="Search username..." required>
-            <input id="submit-btn" type="submit" value="Search">
-        </form>
+        </div>
+        <div id='reposView'>
+            <ul id='repoList'>
+                <h2>Repositories</h2>
+                <li>Repo 1</li>
+                <li>Repo 2</li>
+                <li>Repo 3</li>
+                <li>Repo 4</li>
+            </ul>
+
+        </div>
     </div>
-    <div id='userInfoView'>
-    <div id='userAvatar'><img id='userImg' src='img/placeholder.png'></div>
-
-    <div id='userView'>
-        <span id='username' class='userSpan'>@username</span>
-        <h1 id='fullname'>full name</h1>
-        <span id='biography' class='userSpan'>this is the bio...</span>        
-    </div>
-
-    </div>
-    <div id='reposView'>
-        <ul id='repoList'><h2>Repositories</h2>
-            <li>Repo 1</li>
-            <li>Repo 2</li>
-            <li>Repo 3</li>
-            <li>Repo 4</li>
-        </ul>
-
-    </div>
-</div>
 </body>
 <script src='script/javascript.js'></script>
+    
 </html>
