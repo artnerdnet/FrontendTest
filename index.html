@@ -1,75 +1,75 @@
 <!DOCTYPE html>
 <html>
-    
 <head lang="en">
     <meta charset="UTF-8">
     <title>Github Search Tool!</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 </head>
-
 <body>
-    <div id='contentView'>
-        <div id='searchBox'>
-            <form id="search-form" action="#">
-                <input id="search-keyword" type="text" name="search-keyword" placeholder="Search username..." required>
-                <input id="submit-btn" type="submit" value="Search">
-            </form>
-            <div id='errorMsg' class='hide'>Does not exist.</div>
-        </div>
-        <div id='userInfoView'>
-            <div id='userAvatar'><img id='userImg' src='img/placeholder.png'></div>
 
-            <div id='userView'>
-                <span id='username' class='userSpan'>@username</span>
-                <h1 id='fullname'>full name</h1>
-                <div id='bioBox' class='scrollBar'><span id='biography' class='userSpan'>this is the bio...</span></div>
-            </div>
+<div id='contentView'>
+    <div id='searchBox'>
+        <form id="search-form" action="#">
+            <input id="search-keyword" type="text" name="search-keyword" placeholder="Search username..." required>
+            <input id="submit-btn" type="submit" value="Search">
+        </form>
+        <div id='errorMsg' class='hide'>Does not exist.</div>
+    </div>
+    <div id='userInfoView'>
+    <div id='userAvatar'><img id='userImg' src='img/placeholder.png'></div>
 
-        </div>
-        <div id="reposView">
-            <h2>Repositories</h2>
-            <ul id="repoList" class="scrollBar">
-                <li class="repoListElement">
-                    <span class="repoTitle"><a href="https://github.com/">Repo 1</a></span>
-                    <span class="fas fa-star"></span>
-                    <span class="repoStarCount">1</span>
-                    <span class="fas fa-code-branch"></span>
-                    <span class="repoForkCount">1</span>
-                </li>
-                <li class="repoListElement">
+    <div id='userView'>
+        <span id='username' class='userSpan'>@username</span>
+        <h1 id='fullname'>full name</h1>
+        <div id='bioBox' class='scrollBar'><span id='biography' class='userSpan'>this is the bio...</span></div>
+    </div>
+
+    </div>
+    <div id="reposView">
+        <h2>Repositories</h2>
+        <ul id="repoList" class="scrollBar">
+            <li class="repoListElement">
+                <span class="repoTitle"><a href="https://github.com/">Repo 1</a></span>
+                <span class="fas fa-star"></span>
+                <span class="repoStarCount">1</span>
+                <span class="fas fa-code-branch"></span>
+                <span class="repoForkCount">1</span>
+            </li>
+            <li class="repoListElement">
                     <span class="repoTitle"><a href="https://github.com/">Repo 2</a></span>
                     <span class="fas fa-star"></span>
                     <span class="repoStarCount">6</span>
                     <span class="fas fa-code-branch"></span>
                     <span class="repoForkCount">3</span>
-                </li>
-                <li class="repoListElement">
+            </li>
+            <li class="repoListElement">
                     <span class="repoTitle"><a href="https://github.com/">Repo 3</a></span>
                     <span class="fas fa-star"></span>
                     <span class="repoStarCount">600</span>
                     <span class="fas fa-code-branch"></span>
                     <span class="repoForkCount">34</span>
-                </li>
-                <li class="repoListElement">
+            </li>
+            <li class="repoListElement">
                     <span class="repoTitle"><a href="https://github.com/">Repo 4</a></span>
                     <span class="fas fa-star"></span>
                     <span class="repoStarCount">2</span>
                     <span class="fas fa-code-branch"></span>
                     <span class="repoForkCount">1</span>
-                </li>
-                <li class="repoListElement">
+            </li>
+            <li class="repoListElement">
                     <span class="repoTitle"><a href="https://github.com/">Repo 5</a></span>
                     <span class="fas fa-star"></span>
                     <span class="repoStarCount">2</span>
                     <span class="fas fa-code-branch"></span>
                     <span class="repoForkCount">1</span>
-                </li>
-            </ul>
-        </div>
+            </li>
+        </ul>
     </div>
-    
+</div>
 </body>
-<script src='js/script.js'></script>
-    
+<script src='controller.js'></script>
+<script src='view.js'></script>
+<script src='model.js'></script>
+<script>controller.init()</script>
 </html>
