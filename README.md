@@ -1,50 +1,38 @@
 # FrontendTest
 
-## GOALS
+Github user search tool is a simple tool to see the basic information from an user in Github.
 
-#### The main goal of this tech test is to create a client side web application that reproduces the screenshots below by using [GitHub API](https://developer.github.com/v3/) .
+## How to run it locally
 
-We will only evaluate the client side code and the criteria will be based mainly on:
+To run it locally you can use node.js http-server:
 
-1. Good use of **pure Javascript** language without external libraries and frameworks like jQuery, React...
-2. Clean HTML and CSS markup
-3. Clean, maintainable & easy-to-read
-4. Good architectural practices
+#### http-server: a command-line http server
+Installing globally:
+Installation via npm:
 
-## HOW TO START
+````
+ npm install http-server -g
+````
 
-1. Investigate the GitHub API calls for `user` and `repos` (for example: test them in the browser)
-2. Fork this repository & enter into the directory
-3. Launch the web application, for example with: `python -m SimpleHTTPServer 1337`
-4. Open the browser with http://localhost:1337/ and start coding!
+This will install http-server globally so that it may be run from the command line.
 
-## NOT REQUIRED, BUT IMPRESSIVE
+Usage:
+````
+ http-server
+````
 
-- Adding Unit Testing. External libraries limitation doesn't apply here, you can use Jasmine, Karma...
-- Build System (browseriy, webpack, parcel..)
-- Keep in consideration browsers support
-- ES6+
+You can access the app by typing in your broswer http://127.0.0.1:8080
 
+![Initial screen](https://github.com/artnerdnet/FrontendTest/blob/develop/img/screenshots/1initscreen.jpg)
 
-## SCREENSHOTS
+Once it's running, type the GitHub username you want to search for and hit the search button. You will be able to see:
+- Username
+- Full name
+- Bio (scrollable)
+- Repositories list (scrollable) with repository name (linked), number of forks and number of stars.
 
-#### First Screen
+![Searched username](https://github.com/artnerdnet/FrontendTest/blob/develop/img/screenshots/2searchedusername.jpg)
 
-The user can search a username of GitHub
+If the username you are looking for doesn't exist, then an error message will display below the search box.
 
-![](https://drive.google.com/uc?export=view&id=1V19nQhn7Bn3E-sBNBFtFJIatSaqLUoUj)
-
-#### Success Screen
-
-If the searched username does exist: The searched user profile is displayed with all his repositories
-
-![](https://drive.google.com/uc?export=view&id=1LHyqNTFVQZQ1tdidLXLrCOxo0w6JK9oa)
-
-#### Error Screen
-
-If the searched username does not exist: An error is shown
-
-![](https://drive.google.com/uc?export=view&id=1uIajOBQvo4ugtoxkga8KPbY5x2PlHh0j)
-
-
-
+![Error message](https://github.com/artnerdnet/FrontendTest/blob/develop/img/screenshots/3error.jpg)
