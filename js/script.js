@@ -6,9 +6,10 @@ const username = document.getElementById('usernane');
 const reposContainer = document.getElementById('reposView');
 
 searchForm.addEventListener('submit', function(e) {
+    e.preventDefault();
     searchedTerm = searchField.value;
 
-    fetch(`https://api.gitub.com/users/${searchedTerm}`, {
+    fetch(`https://api.github.com/users/${searchedTerm}`, {
         headers: {
             Authorization: 'Client-ID 583f4cd67ae6eb74a55f'
         },
@@ -36,7 +37,6 @@ searchForm.addEventListener('submit', function(e) {
                 usernameSpan.innerHTML += `@ ${userLogin}`;
                 userContainer.appendChild(usernameSpan);
             }
-
 
             let addUserFullNameInfo = () => {
                 let userFullNameSpan = document.createElement('h1');
@@ -73,7 +73,6 @@ searchForm.addEventListener('submit', function(e) {
                 Authorization: 'Client-ID 583f4cd67ae6eb74a55f'
             },
             mode: 'cors'
-
         }).then(response => response.json()).then(function(data) {
             let repoOwner = data.owner;
             let repoListing = document.getElementById('repoList');
@@ -121,7 +120,7 @@ searchForm.addEventListener('submit', function(e) {
                     createLi.appendChild(repoForkIconSpan);
                     repoForkIconSpan.classList.add('fas', 'fa-code-branch');
                 }
-
+                
                 addRepoTitle();
                 addStarIcon();
                 addStarCount();
@@ -130,4 +129,4 @@ searchForm.addEventListener('submit', function(e) {
             }
         })
     }
-});
+}), true;
