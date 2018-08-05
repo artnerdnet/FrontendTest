@@ -7,20 +7,12 @@ var controller = {
     searchByUsername: function(searchedkeyword){
         let userSearched = searchedkeyword;
         userModel.searchedTerm = userSearched;
-        userModel.searchUser(userSearched);
-    },
-
-    getUserFullName: function() {
-        return userModel.userFullName; 
-    },
-
-    getUserBio: function() {
-        return userModel.userBio; 
-    },
-
-    getUserAvatar: function() {
-        return userModel.userAvatar; 
-    },
-
-        
+        userModel.searchUser(userSearched).then(function(){
+            userData.username;
+            userData.bio;
+            userData.name;
+            userData.avatar;
+            userView.render();
+        });
+    },      
 }

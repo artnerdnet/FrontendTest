@@ -4,8 +4,10 @@ const userView = {
         this.searchForm = document.getElementById('search-form');
         this.searchField = document.getElementById('search-keyword');
         this.userContainer = document.getElementById('userView');
-        this.username = document.getElementById('username');
-        this.fullName = document.getElementById('fullName');
+        this.userAvatarDiv = document.getElementById('userImg');
+        this.usernameDiv = document.getElementById('username');
+        this.fullNameDiv = document.getElementById('fullname');
+        this.bioDiv = document.getElementById('bioBox');
         this.reposContainer = document.getElementById('reposView');
 
         this.searchForm.addEventListener('submit',  (e) => {
@@ -18,8 +20,21 @@ const userView = {
     },
 
     render: function(){
-        let getUserInfo = controller.userInfoLogin;
-        this.username.HTML = '';
-        this.username.innerHTML += `@${getUserInfo}`;
+
+        this.usernameDiv.innerHTML = '';
+        this.usernameDiv.innerHTML += `@${userData.username}`;
+
+        this.fullNameDiv.innerHTML = '';
+        this.fullNameDiv.innerHTML += `${userData.name}`;
+        
+        let userAvatar = userData.avatar;
+        this.userAvatarDiv.src = userAvatar;
+
+        this.bioDiv.innerHTML = '';
+        this.bioDiv.innerHTML += `${userData.bio}`;
+
+
+
+       
     }
 }
