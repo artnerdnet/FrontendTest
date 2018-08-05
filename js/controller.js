@@ -3,7 +3,9 @@ var controller = {
     init: function() {
         userView.init();
     },
-
+    mytest: () => {
+        return true;
+    },
     searchByUsername: function(searchedkeyword){
         let userSearched = searchedkeyword;
         userModel.searchedTerm = userSearched;
