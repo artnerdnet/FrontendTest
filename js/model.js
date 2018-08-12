@@ -1,9 +1,12 @@
+const clientKey = 'Client-ID 583f4cd67ae6eb74a55f';
+const URL = `https://api.github.com/users/`;
 const userModel = {
+    
+
     searchUser: function(userSearched) {
-        searchedTerm = controller.userSearched;
-        return fetch(`https://api.github.com/users/${this.searchedTerm}`, {
+        return fetch(URL+`${userSearched}`, {
             headers: {
-                Authorization: 'Client-ID 583f4cd67ae6eb74a55f'
+                Authorization: clientKey
             },
             mode: 'cors'
         }).then(response => response.json()).then(function(data){
@@ -26,9 +29,9 @@ const userModel = {
 
     const repoModel = {
         searchRepos: function(){
-            fetch(`https://api.github.com/users/${searchedTerm}/repos`, {
+            fetch(URL+`${userSearched}+/repos`, {
                 headers: {
-                    Authorization: 'Client-ID 583f4cd67ae6eb74a55f'
+                    Authorization: clientKey
                 },
                 mode: 'cors'
             }).then(response => response.json()).then(function(repoData) {

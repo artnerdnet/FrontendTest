@@ -20,7 +20,6 @@ const userView = {
     },
 
     render: function(){
-
         this.usernameDiv.innerHTML = '';
         this.usernameDiv.innerHTML += `@${userData.username}`;
 
@@ -31,10 +30,12 @@ const userView = {
         this.userAvatarDiv.src = userAvatar;
 
         this.bioDiv.innerHTML = '';
-        this.bioDiv.innerHTML += `${userData.bio}`;
-
-
-
-       
+        this.bioDiv.innerHTML += `${userData.bio}`;       
     }
 }
+
+const repoView = {
+    init: function() {
+        
+    }
+};
