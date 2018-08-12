@@ -185,16 +185,22 @@ input::-webkit-input-placeholder {
     align-content: center;
     align-items: center;
     font-family: 'Open Sans', sans-serif;
+    list-style: none;
 }
 
-span.repoTitle {
+ul {
+    margin: 0;
+}
+
+li.repoTitle {
     text-decoration: none;
     font-size: 12pt;
     color: black;
     width: 80%;
 }
 
-span.fas {
+li.fas {
+    
     padding: 0 0 0 10px;
     margin: 0;
     font-size: 10pt;
@@ -202,14 +208,14 @@ span.fas {
     text-align: right;
 }
 
-.repoStarCount {
+li.repoStarCount {
     padding: 2px;
     width: 5%;
     font-size: 10pt;
     font-family: 'Open Sans', sans-serif;
 }
 
-.repoForkCount {
+li.repoForkCount {
     padding: 2px;
     width: 5%;
     font-size: 10pt;

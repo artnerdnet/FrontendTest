@@ -2,19 +2,14 @@ var controller = {
 
     init: function() {
         userView.init();
+        repoView.init(); debugger
     },
-    mytest: () => {
-        return true;
-    },
+
     searchByUsername: function(searchedkeyword){
         let userSearched = searchedkeyword;
-        userModel.searchedTerm = userSearched;
-        userModel.searchUser(userSearched).then(function(){
-            userData.username;
-            userData.bio;
-            userData.name;
-            userData.avatar;
+        userModel.searchUser(userSearched).then(function(){ debugger
             userView.render();
+            repoView.render(); debugger
         });
-    },      
+    }
 }

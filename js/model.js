@@ -1,10 +1,9 @@
 const clientKey = 'Client-ID 583f4cd67ae6eb74a55f';
 const URL = `https://api.github.com/users/`;
 const userModel = {
-    
 
     searchUser: function(userSearched) {
-        return fetch(URL+`${userSearched}`, {
+        return fetch(`${URL}${userSearched}`, {
             headers: {
                 Authorization: clientKey
             },
@@ -28,18 +27,19 @@ const userModel = {
 };
 
     const repoModel = {
-        searchRepos: function(){
-            fetch(URL+`${userSearched}+/repos`, {
+        searchRepos: function(userSearched){ debugger
+            fetch(`${URL}${userSearched}\/repos`, {
                 headers: {
                     Authorization: clientKey
                 },
                 mode: 'cors'
             }).then(response => response.json()).then(function(repoData) {
+                debugger
                 repoData = {
-                    repoName: info.name,
-                    repoURL: info.html_url,
-                    repoForks: info.forks_count,
-                    repoStars: info.stargazers_count,
+                    repoName: data.name,
+                    repoURL: data.html_url,
+                    repoForks: data.forks_count,
+                    repoStars: data.stargazers_count,
                 }
     
                 return repoData;
